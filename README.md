@@ -5,13 +5,63 @@
 
 ### 강의 목록
 ###### ※ 본 강의 목록은 *내림차순*으로 정렬되어있음.
-1. [7주차](#7주차)
-2. [6주차](#6주차)
-3. [5주차](#5주차)
-4. [4주차](#4주차)
-5. [3주차](#3주차)
-6. [2주차](#2주차)
-7. [1주차](#1주차)
+1. [9주차](#9주차)
+2. [7주차](#7주차)
+3. [6주차](#6주차)
+4. [5주차](#5주차)
+5. [4주차](#4주차)
+6. [3주차](#3주차)
+7. [2주차](#2주차)
+8. [1주차](#1주차)
+
+---
+
+## 9주차
+##### 23.05.08 월요일
+### 강의
+#### 1. 자바스크립트 객체
+객체란?
+#### 생성자 함수와 클래스
+if
+#### 객체의 키와 값
+for
+### 실습
+#### student
+```js
+let student = {
+    name : "Doremi",
+    score : {
+        history : 85,
+        science : 94,
+        average() {
+            return (this.history + this.science) / 2;
+        }
+    }
+}
+
+let history = student.score.history;
+student.score.average();
+```
+#### book
+```js
+function Book(title, pages, done = false) {
+    this.title = title;
+    this.pages = pages;
+    this.done = done;
+    this.finish = () => {
+        let str = "";
+
+        this.done === false ? str = "읽는 중" : str = "완독";
+        return str;
+    };
+}
+
+let book1 = new Book("웹 표준의 정석", 648, false);
+let book2 = new Book("점프 투 파이썬", 360, true);
+
+console.log(`${book1.title} - ${book1.pages} - ${book1.finish()}`);
+console.log(`${book2.title} - ${book2.pages} - ${book2.finish()}`);
+```
 
 ---
 
